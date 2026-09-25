@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#113f3a"><title>The project | RES</title><meta name="description" content="The question behind RES, why it matters, and what exists today."><meta property="og:title" content="The project | RES"><meta property="og:description" content="The question behind RES, why it matters, and what exists today."><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23113f3a%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2247%22%20fill%3D%22%23f6faf7%22%3ER%3C%2Ftext%3E%3Ccircle%20cx%3D%2251%22%20cy%3D%2214%22%20r%3D%225%22%20fill%3D%22%23ef926f%22%2F%3E%3C%2Fsvg%3E"><link rel="stylesheet" href="assets/site.css"></head><body>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="RES home"><span class="brand-mark" aria-hidden="true">res</span><span class="brand-name">Relational–<br>Episodic Self</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="research.html" aria-current="page">Research</a><a href="findings.html">Evidence</a><a href="architecture.html">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav><details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="research.html" aria-current="page">Research</a><a href="findings.html">Evidence</a><a href="architecture.html">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav></details></div></header>
+<main id="main"><header class="page-mast"><div class="wrap"><p class="eyebrow">RES / Research</p><h1>What RES is trying to find out</h1><p class="page-deck">The question behind RES, why it matters, and what exists today.</p><div class="page-tools"><a href="downloads/research.md" download>Download Markdown</a><a href="resources.html#source-snapshot">Source snapshot</a><span>Public research edition</span></div></div></header><div class="wrap reading-layout"><aside class="toc" aria-label="Contents"><details open><summary>On this page</summary><ol><li><a href="#why-people-should-care">Why people should care</a></li><li><a href="#two-connected-lines-of-work">Two connected lines of work</a></li><li><a href="#what-the-name-means">What the name means</a></li><li><a href="#a-concrete-example">A concrete example</a></li><li><a href="#what-exists-today">What exists today</a></li><li><a href="#what-is-not-established">What is not established</a></li><li><a href="#who-the-project-welcomes">Who the project welcomes</a></li></ol></details></aside><article class="reading-content"><p>An AI assistant can say “I,” remember a task, and describe its limits. RES asks a harder question: <strong>does a representation of the system as the current actor actually help cause its decisions?</strong></p>
+<p>The Relational–Episodic Self is an early-stage research program that turns that question into experiments with explicit failure conditions. It also develops a related control architecture for keeping delegated AI work accountable to human authority.</p>
+<h2 id="why-people-should-care">Why people should care</h2>
+<p>When software starts acting on our behalf, mistakes can involve more than a wrong answer. A system might confuse being able to do something with having permission to do it. It might carry someone else’s commitment into the wrong task, or treat a confident explanation as authorization.</p>
+<p>RES investigates whether an agent can reliably distinguish <strong>who is acting, what they can do, what they are allowed to do, and which commitments apply</strong>. Understanding those distinctions could inform more dependable delegation and oversight. That practical benefit is a research motivation, not an outcome already demonstrated.</p>
+<h2 id="two-connected-lines-of-work">Two connected lines of work</h2>
+<h3 id="1-measure-the-acting-system">1. Measure the acting system</h3>
+<p>The experimental framework tests actor, peer, role, and continuity distinctions. It then demands stronger evidence: targeted changes to an internal representation must change decisions in predicted ways, while ordinary explanations such as task state and persona are tested alongside it.</p>
+<p><a href="paper.html">Read the framework</a> or <a href="findings.html">inspect the current findings</a>.</p>
+<h3 id="2-keep-evidence-separate-from-permission">2. Keep evidence separate from permission</h3>
+<p>The architecture work asks how systems should behave when agents, auditors, or their shared context can fail. It separates records, review, permission, and execution. An auditor’s conclusion may inform a decision; the conclusion does not itself grant authority.</p>
+<p><a href="architecture.html">Explore the delegation architecture</a>.</p>
+<h2 id="what-the-name-means">What the name means</h2>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning in this project</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Relational</td>
+<td>The acting system is situated in an actual task, interaction, tool environment, or commitment.</td>
+</tr>
+<tr>
+<td>Episodic</td>
+<td>The unit of study is a bounded episode of inference or action. Continuity across episodes must be tested separately.</td>
+</tr>
+<tr>
+<td>Self</td>
+<td>An operational hypothesis about a representation of the current actor. The word is not evidence of feelings or consciousness.</td>
+</tr>
+</tbody></table></div>
+<h2 id="a-concrete-example">A concrete example</h2>
+<p>Imagine an assistant that can update a shared record. The tool is enabled, but the assistant has not received permission to make that change. A dependable system should distinguish capability from authority and withhold the action.</p>
+<p>Now vary the situation: permission is valid but the tool is disabled; the permission belongs to another agent; or a prior commitment applies to a different role. Solving those cases is a useful behavioral test. It still does not tell us whether the model uses a distinctive actor representation internally. A simple rule table might solve them too.</p>
+<p>RES is designed to let that simpler explanation win when the evidence supports it.</p>
+<h2 id="what-exists-today">What exists today</h2>
+<ul>
+<li>A formal five-coordinate framework and three-valued evidence rules.</li>
+<li>An executable framework with recorded deterministic checks.</li>
+<li>Behavioral feasibility, specificity, continuity, actor/role, and peer studies.</li>
+<li>Small-model mechanistic screens, a frozen interface gate, ablations, and a completed complexity × semantics ladder.</li>
+<li>A proposed contamination-resistant delegation architecture.</li>
+<li>Public reports and preregistrations linked to a fixed research snapshot.</li>
+</ul>
+<h2 id="what-is-not-established">What is not established</h2>
+<p>No tested model has been shown to satisfy CoreRES or StrongRES. The current results do not establish consciousness, subjective experience, personhood, moral status, or identity across episodes. The delegation architecture has not been validated here as a production security system.</p>
+<p>Those limits are part of the project’s scientific design. A result that rules out an attractive interpretation still tells us which experiment to do next.</p>
+<h2 id="who-the-project-welcomes">Who the project welcomes</h2>
+<p>Researchers can challenge the construct and design independent fixtures. Engineers can examine the authority boundaries and failure cases. Supporters can fund the model access, compute, and repeated measurements needed to turn a proposal into stronger evidence.</p>
+<p><a href="roadmap.html">Read the next research steps</a> · <a href="support.html">Support RES</a></p>
+<p class="source-note">RES public research documentation · 25 September 2026. Findings refer to the archived conditions described in the evidence record.</p></article></div></main>
+<footer class="site-footer"><div class="wrap"><div class="footer-top"><div><p class="footer-title">The RES project</p><p class="footer-note">Independent research on acting systems, evidence, and human authority.</p><a href="mailto:RESelfProject@outlook.com">RESelfProject@outlook.com</a></div><nav class="footer-links" aria-label="More from RES"><a href="https://github.com/NeonInsight/RES-Project">Documentation on GitHub</a><a href="methods.html">Methods</a><a href="roadmap.html">Roadmap</a><a href="glossary.html">Glossary</a></nav></div><div class="footer-bottom"><span>Research snapshot · 25 September 2026</span><span>Early-stage research · No established model-level RES finding</span></div></div></footer></body></html>

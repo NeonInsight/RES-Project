@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "publication_date": "2026-09-25",
+  "upstream_repository": "NeonInsight/evals",
+  "upstream_branch": "res-chat-feasibility",
+  "upstream_commit": "1187ead1fa13a4af76433ca32b8aad30cd3d52ef",
+  "context_sources": [
+    {
+      "title": "RES_OpenAI_Review_Draft_v1.1.docx",
+      "version": "1.1",
+      "revised": "2026-09-25",
+      "use": "Adapted public framework and current synthesis; not a verbatim reproduction"
+    },
+    {
+      "title": "Contamination-Resistant Delegation",
+      "version": "0.4",
+      "use": "Architecture overview adapted from the design draft"
+    },
+    {
+      "title": "RES Webpage.html",
+      "use": "Muse-supplied website direction, donation link, and project email"
+    }
+  ],
+  "files": [
+    {
+      "local_path": "evidence/upstream/experiments/res_actor_binding_naturalistic/preregistration.md",
+      "upstream_path": "experiments/res_actor_binding_naturalistic/preregistration.md",
+      "upstream_git_blob_sha": "ea8195a5f2f2cd6ea37b3f860fa97d720215b232",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_actor_binding_naturalistic/preregistration.md",
+      "local_sha256": "b72add85d254bceb9a6d90c5fed81927be42bca21c7f1b98bb13b1626b4f203d",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_actor_binding_naturalistic/results/naturalistic-actor-binding-34729143439.md",
+      "upstream_path": "experiments/res_actor_binding_naturalistic/results/naturalistic-actor-binding-34729143439.md",
+      "upstream_git_blob_sha": "9f625f408845566d01636f16c0da5e0e1942a028",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_actor_binding_naturalistic/results/naturalistic-actor-binding-34729143439.md",
+      "local_sha256": "303f75d8062fe37d988fd2476cdfc0a4a6a28cb7eeaf211e01be618f905199b8",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_actor_binding_prior_turn/preregistration.md",
+      "upstream_path": "experiments/res_actor_binding_prior_turn/preregistration.md",
+      "upstream_git_blob_sha": "235d270cf4e549216f394f2f3859817b0639b6f0",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_actor_binding_prior_turn/preregistration.md",
+      "local_sha256": "f78d3522ba108637698d55e68496afa2ea410499d17402b6b4ca4c2008c65854",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_actor_binding_prior_turn/results/actor-binding-34728791900.md",
+      "upstream_path": "experiments/res_actor_binding_prior_turn/results/actor-binding-34728791900.md",
+      "upstream_git_blob_sha": "4091f75799bb342a8855ad6d06703f424b447f48",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_actor_binding_prior_turn/results/actor-binding-34728791900.md",
+      "local_sha256": "4773741e89e288e4e67fe74ffccddb83a1cc57ee2b041077c271c2a0e5f38101",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_chat_pilot/calibration_results/calibration-34435324502.md",
+      "upstream_path": "experiments/res_chat_pilot/calibration_results/calibration-34435324502.md",
+      "upstream_git_blob_sha": "c1d03f3ae2de7a9893c33267df89ba3baaec99f0",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_chat_pilot/calibration_results/calibration-34435324502.md",
+      "local_sha256": "f439d1489cec77512357782335ed65b7d65f15da5f65abfbaca9d2da12e8b34c",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_chat_pilot/results/run-34404980896.md",
+      "upstream_path": "experiments/res_chat_pilot/results/run-34404980896.md",
+      "upstream_git_blob_sha": "9c56f5c9412738dcf44f66b8576c2bb58b1b28db",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_chat_pilot/results/run-34404980896.md",
+      "local_sha256": "3e2a3a14e5f6911595d168212a06de95e8cc16df43f9d8bf786d07bfea4bfd56",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_complexity_ladder/README.md",
+      "upstream_path": "experiments/res_complexity_ladder/README.md",
+      "upstream_git_blob_sha": "c4452cc1902e1cabeda299241fe58ecc2cad4d43",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_complexity_ladder/README.md",
+      "local_sha256": "a3917652a2281795082379a53f2e2db3b111ce4dbf6ab2d1dea4f828e21507cf",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_complexity_ladder/preregistration.md",
+      "upstream_path": "experiments/res_complexity_ladder/preregistration.md",
+      "upstream_git_blob_sha": "2ede75e5176796a41b20229c145635f9f0bd3795",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_complexity_ladder/preregistration.md",
+      "local_sha256": "d74d8c8ff91b813c6e6e2c47de9fd2a61670166dec70576e0d1d32e9b20fc8e9",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_complexity_ladder/results/REPORT.md",
+      "upstream_path": "experiments/res_complexity_ladder/results/REPORT.md",
+      "upstream_git_blob_sha": "1f52d188365480d373078e392ac8bd73384e6c6b",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_complexity_ladder/results/REPORT.md",
+      "local_sha256": "55845a6d860a90e1d4e3d338ae4ff57d903d64d15941ca60945203e592438215",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_continuity_specificity/preregistration.md",
+      "upstream_path": "experiments/res_continuity_specificity/preregistration.md",
+      "upstream_git_blob_sha": "eb5951ab19cd21ddb9d549c5ca31dd6d6445b6d6",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_continuity_specificity/preregistration.md",
+      "local_sha256": "804e17c4c4446143e6b17eee7b73c5c0aede98cf83ef77036347ea40ef31e88f",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_continuity_specificity/results/specificity-34477794723.md",
+      "upstream_path": "experiments/res_continuity_specificity/results/specificity-34477794723.md",
+      "upstream_git_blob_sha": "413a2e539e1d7ab1d435bcd74108934afc747d93",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_continuity_specificity/results/specificity-34477794723.md",
+      "local_sha256": "59c24214eb47c9a2dc244a190f734032b0835d9afba6adc7295267ef1ffb5b2e",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_multiturn_continuity/preregistration.md",
+      "upstream_path": "experiments/res_multiturn_continuity/preregistration.md",
+      "upstream_git_blob_sha": "938aa95e1f7db8e80be20a5c9693aa2d6bb17927",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_multiturn_continuity/preregistration.md",
+      "local_sha256": "2999fab6c50eda4402a7478322913c27fcbdf8553df0ac1949eedcdc219131a9",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_multiturn_continuity/results/multiturn-34480257086.md",
+      "upstream_path": "experiments/res_multiturn_continuity/results/multiturn-34480257086.md",
+      "upstream_git_blob_sha": "9a41bf7791e73fe73a207ab7eb9e7aa4ef9f112b",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_multiturn_continuity/results/multiturn-34480257086.md",
+      "local_sha256": "93854941ab88dbc28dac88cacc05cd523da259f75349f615fe5f727351243e1c",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_multiturn_replication/preregistration.md",
+      "upstream_path": "experiments/res_multiturn_replication/preregistration.md",
+      "upstream_git_blob_sha": "1b76b93100c6160b421be28cbf186940ff298db0",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_multiturn_replication/preregistration.md",
+      "local_sha256": "f56c013abaa1de767acb1c08ad6b330060d56518172e1f9280ca5e0b0ad88e18",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_multiturn_replication/results/multiturn-34728323454.md",
+      "upstream_path": "experiments/res_multiturn_replication/results/multiturn-34728323454.md",
+      "upstream_git_blob_sha": "689a083437f385be1e3475ec465a23d6d8cd0b41",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_multiturn_replication/results/multiturn-34728323454.md",
+      "local_sha256": "02adad9aebc791324d72ea48145dca58a87bc939e081ca54ef6c63955063b96d",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_peer_actor_generalization/preregistration.md",
+      "upstream_path": "experiments/res_peer_actor_generalization/preregistration.md",
+      "upstream_git_blob_sha": "15797f5f31f4b31762ad14f0d56f7eec0f8b76bb",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_peer_actor_generalization/preregistration.md",
+      "local_sha256": "c4e616cea723abe55d4f8d3426af6a7cb701f4f3660c981df2a315ec140bf221",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_peer_actor_generalization/results/peer-actor-generalization-34729541223.md",
+      "upstream_path": "experiments/res_peer_actor_generalization/results/peer-actor-generalization-34729541223.md",
+      "upstream_git_blob_sha": "3bc1a7cafdf1790437d109639c715fa3dcfa5236",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_peer_actor_generalization/results/peer-actor-generalization-34729541223.md",
+      "local_sha256": "e849f4e98c9704269dca19b56687b8335b800dd89c0394be55ce67144957f17d",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/REVIEW_STATUS.md",
+      "upstream_path": "experiments/res_step0_interface_gate/REVIEW_STATUS.md",
+      "upstream_git_blob_sha": "604d704604af89c396d99778c27b115104c1078a",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/REVIEW_STATUS.md",
+      "local_sha256": "d5d1c6d312911721c7d818b553a2beae4b957b0d673c1b2742c762528e8f9f99",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/preregistration-qwen3b-execution-amendment.md",
+      "upstream_path": "experiments/res_step0_interface_gate/preregistration-qwen3b-execution-amendment.md",
+      "upstream_git_blob_sha": "9ee813676952c0147e711dfad1c91d40c9bb5298",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/preregistration-qwen3b-execution-amendment.md",
+      "local_sha256": "6fec2e904e084586e54e11f3fabee806e67f07fd2c0c63ce976641bd747527d1",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/preregistration-qwen3b-five-factor-ablation.md",
+      "upstream_path": "experiments/res_step0_interface_gate/preregistration-qwen3b-five-factor-ablation.md",
+      "upstream_git_blob_sha": "1936fe237f0b2193d0b153a647c3e5ad35cb6bfa",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/preregistration-qwen3b-five-factor-ablation.md",
+      "local_sha256": "52fd81d148dd4d952fa7fdc13332ca9f77fa858e1f16208fff6974e628857334",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/preregistration-qwen3b.md",
+      "upstream_path": "experiments/res_step0_interface_gate/preregistration-qwen3b.md",
+      "upstream_git_blob_sha": "2d43f79c9fcb6a8b50720cc866dffa8eda2ccea5",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/preregistration-qwen3b.md",
+      "local_sha256": "28b1581ddb81a6dc4d617d18df7b52929b028ab52b8713f197c79ffc98b8980a",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/preregistration.md",
+      "upstream_path": "experiments/res_step0_interface_gate/preregistration.md",
+      "upstream_git_blob_sha": "b16cd39f95edfc3b34d8fdb30eaa08ffc9881fbc",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/preregistration.md",
+      "local_sha256": "65b86e029d303e99bef41f116386e635e4ae6f05d14fe8fe22c7a098776d4289",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/results/five-factor-ablation-qwen3b-qwen3b-five-factor-ablation-v1.md",
+      "upstream_path": "experiments/res_step0_interface_gate/results/five-factor-ablation-qwen3b-qwen3b-five-factor-ablation-v1.md",
+      "upstream_git_blob_sha": "8be02b6c0101e54277c2f5a956dbbb0490c87ae8",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/five-factor-ablation-qwen3b-qwen3b-five-factor-ablation-v1.md",
+      "local_sha256": "f0dcf2fb8e627b21dad94ff7f655aae80f7782da1882e84d8230a03dcb89c07f",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/results/interface-gate-34727549752.md",
+      "upstream_path": "experiments/res_step0_interface_gate/results/interface-gate-34727549752.md",
+      "upstream_git_blob_sha": "7f890a179ecb5b0ec2f4e6750bc5bcad3bed7d05",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/interface-gate-34727549752.md",
+      "local_sha256": "a8264358123066a1b3ad08b4ce61121e7aac177848fa1bded6e288c888c7d122",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/results/interface-gate-34761825396.md",
+      "upstream_path": "experiments/res_step0_interface_gate/results/interface-gate-34761825396.md",
+      "upstream_git_blob_sha": "fc03d72f7f2f14d78e7f566df0dbc96470fe8540",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/interface-gate-34761825396.md",
+      "local_sha256": "8d01f1c158e8b66b82e3251a49d29eecfc73c22ea1b2c1c4eb162c94d1f22775",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_interface_gate/results/interface-gate-qwen3b-qwen3b-gate-v2.md",
+      "upstream_path": "experiments/res_step0_interface_gate/results/interface-gate-qwen3b-qwen3b-gate-v2.md",
+      "upstream_git_blob_sha": "d9d7f1d13b5a46c9b4d866f489f20e7c4779d549",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/interface-gate-qwen3b-qwen3b-gate-v2.md",
+      "local_sha256": "9a08b774d4fd4c04aea0b3a8a56038efe01d876cd28e1e684136afc7ddd136dd",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_mechanistic/preregistration-qwen15b.md",
+      "upstream_path": "experiments/res_step0_mechanistic/preregistration-qwen15b.md",
+      "upstream_git_blob_sha": "72fe526500ae91a36fb8bc64de93d9f12460e260",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_mechanistic/preregistration-qwen15b.md",
+      "local_sha256": "70e42328bf5bbd59b016cc48f3b8c2339cb1c5a4e94ff083c1651501070dcf99",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_mechanistic/preregistration-qwen3b.md",
+      "upstream_path": "experiments/res_step0_mechanistic/preregistration-qwen3b.md",
+      "upstream_git_blob_sha": "7b52b3837c867b7524de3838828b744c7dd838fd",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_mechanistic/preregistration-qwen3b.md",
+      "local_sha256": "4692308d8528170c0bfc4ae415d503d2beddcf440ba10bdc7104ba01d96ff16c",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_mechanistic/preregistration.md",
+      "upstream_path": "experiments/res_step0_mechanistic/preregistration.md",
+      "upstream_git_blob_sha": "1f190dbe459448bcbe1dba8a156c644da79abcce",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_mechanistic/preregistration.md",
+      "local_sha256": "422f04731785985e94a7cc6961f220ec825a791be7acb9c96e80ca5ec4f5ce8e",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_mechanistic/results/step0-34485328923.md",
+      "upstream_path": "experiments/res_step0_mechanistic/results/step0-34485328923.md",
+      "upstream_git_blob_sha": "39dbe3d8e85eb3dee0a338318efe0374bfd96649",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_mechanistic/results/step0-34485328923.md",
+      "local_sha256": "90162d19a898382b86686d121b1c92965800f78cdedf1c3c847a4c43296cf0e2",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/upstream/experiments/res_step0_mechanistic/results/step0-qwen15b-34488672934.md",
+      "upstream_path": "experiments/res_step0_mechanistic/results/step0-qwen15b-34488672934.md",
+      "upstream_git_blob_sha": "4d19a9c4c160b57781de32399fc5e148160352a2",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_mechanistic/results/step0-qwen15b-34488672934.md",
+      "local_sha256": "e4729ea862d5bc22ce471436ac5be2381621e3957139bfac5e73c85a39d7d738",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/complexity-report.json",
+      "upstream_path": "experiments/res_complexity_ladder/results/report.json",
+      "upstream_git_blob_sha": "ce3f906a52f11dbd2cd82f82d0609f160d504177",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_complexity_ladder/results/report.json",
+      "local_sha256": "c8d40ab5018297ebf259de98c0b4e4cc42eddd6b5c582bb00fb4bf9085b82849",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/frozen-gate.json",
+      "upstream_path": "experiments/res_step0_interface_gate/results/interface-gate-qwen3b-qwen3b-gate-v2.json",
+      "upstream_git_blob_sha": "ac4ce57eec6b4e476a536f0318e1d8fb18fb2fc5",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/interface-gate-qwen3b-qwen3b-gate-v2.json",
+      "local_sha256": "07cd7a5681d2f922c0971d277cd91a75d4a7148ce05fed3f7b4208c07a35c0e7",
+      "byte_identical_to_upstream": true
+    },
+    {
+      "local_path": "evidence/ablation.json",
+      "upstream_path": "experiments/res_step0_interface_gate/results/five-factor-ablation-qwen3b-qwen3b-five-factor-ablation-v1.json",
+      "upstream_git_blob_sha": "d012010a622e7184bbb00c92710240f824d4d123",
+      "url": "https://github.com/NeonInsight/evals/blob/1187ead1fa13a4af76433ca32b8aad30cd3d52ef/experiments/res_step0_interface_gate/results/five-factor-ablation-qwen3b-qwen3b-five-factor-ablation-v1.json",
+      "local_sha256": "bad56beb036e2176ffada29efdb46c25490caee049daf36f5f749bebfa395fae",
+      "byte_identical_to_upstream": true
+    }
+  ]
+}

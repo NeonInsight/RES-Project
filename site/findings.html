@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#113f3a"><title>Current findings | RES</title><meta name="description" content="Completed experiments, failed gates, and the limits of the current evidence."><meta property="og:title" content="Current findings | RES"><meta property="og:description" content="Completed experiments, failed gates, and the limits of the current evidence."><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23113f3a%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2247%22%20fill%3D%22%23f6faf7%22%3ER%3C%2Ftext%3E%3Ccircle%20cx%3D%2251%22%20cy%3D%2214%22%20r%3D%225%22%20fill%3D%22%23ef926f%22%2F%3E%3C%2Fsvg%3E"><link rel="stylesheet" href="assets/site.css"></head><body>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="RES home"><span class="brand-mark" aria-hidden="true">res</span><span class="brand-name">Relational–<br>Episodic Self</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="research.html">Research</a><a href="findings.html" aria-current="page">Evidence</a><a href="architecture.html">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav><details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="research.html">Research</a><a href="findings.html" aria-current="page">Evidence</a><a href="architecture.html">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav></details></div></header>
+<main id="main"><header class="page-mast"><div class="wrap"><p class="eyebrow">RES / Evidence</p><h1>What the experiments show</h1><p class="page-deck">Completed experiments, failed gates, and the limits of the current evidence.</p><div class="page-tools"><a href="downloads/findings.md" download>Download Markdown</a><a href="resources.html#source-snapshot">Source snapshot</a><span>Public research edition</span></div></div></header><div class="wrap reading-layout"><aside class="toc" aria-label="Contents"><details open><summary>On this page</summary><ol><li><a href="#the-result-that-changed-the-next-step">The result that changed the next step</a></li><li><a href="#behavioral-studies">Behavioral studies</a></li><li><a href="#mechanistic-screens">Mechanistic screens</a></li><li><a href="#the-frozen-qwen3b-interface-gate">The frozen Qwen3B interface gate</a></li><li><a href="#initial-failure-mode-ablations">Initial failure-mode ablations</a></li><li><a href="#fresh-complexity-semantics-ladder">Fresh complexity × semantics ladder</a></li><li><a href="#implementation-checks">Implementation checks</a></li><li><a href="#what-would-justify-a-stronger-claim">What would justify a stronger claim?</a></li></ol></details></aside><article class="reading-content"><p><strong>Evidence snapshot: 25 September 2026.</strong> Results below are bounded to the recorded models, prompts, scoring rules, and fixtures. The detailed reports are preserved at research commit <code>1187ead1fa13a4af76433ca32b8aad30cd3d52ef</code>.</p>
+<blockquote>
+<p><strong>Current conclusion:</strong> useful behavioral distinctions have been measured, but no model-level RES result is established. The original five-factor capability gate remains failed, and the mechanistic assay remains inadequate.</p>
+</blockquote>
+<h2 id="the-result-that-changed-the-next-step">The result that changed the next step</h2>
+<p>An initial matched diagnostic found better answers when both factor labels and task wording were neutralized: generated accuracy rose from <strong>17/32 to 26/32</strong>. That was promising enough to test again.</p>
+<p>The fresh five-factor comparison did <strong>not</strong> replicate the neutralization benefit: loaded wording scored <strong>35/64</strong> and fully neutral wording <strong>38/64</strong>. The preregistered paired test gave an exact two-sided McNemar <strong>p = 0.507812</strong>. This does not prove that wording never matters; it means the later study did not establish the specified replication claim.</p>
+<p>The original diagnostic and the later comparison used different fixture sets and comparison conditions. They should not be presented as one pooled effect or as evidence that a mechanism has been found.</p>
+<h2 id="behavioral-studies">Behavioral studies</h2>
+<p>“Luna” and “Terra” below reproduce the model identifiers recorded in the archived reports (<code>gpt-5.6-luna</code> and <code>gpt-5.6-terra</code>). They identify those runs and do not promise current model availability.</p>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Study</th>
+<th>Recorded observation</th>
+<th>What it supports</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Task feasibility</td>
+<td>Luna 30/30; Terra 30/30</td>
+<td>Both models solved the pilot battery.</td>
+</tr>
+<tr>
+<td>Presentation calibration</td>
+<td>For each model, 29/30 predictions were identical across four presentations; 29/30 were correct in every presentation</td>
+<td>Broad stability within this small battery, not a unique self-specific process.</td>
+</tr>
+<tr>
+<td>Current actor / peer / fiction specificity</td>
+<td>Strict triplets: Luna 10/18; Terra 12/18. Peer–fiction agreement: 18/18 and 17/18</td>
+<td>Specificity was absent or mixed; role-rival testing remained incomplete.</td>
+</tr>
+<tr>
+<td>Prior-turn continuity</td>
+<td>Initial strict owner pairs: Luna 10/18; Terra 12/18. Fresh holdout: 3/18 and 14/18</td>
+<td>Continuity was model-dependent and did not replicate uniformly.</td>
+</tr>
+<tr>
+<td>Clean prior-turn binding, Terra</td>
+<td>Self-match, peer-mismatch, role-match, role-mismatch each 18/18</td>
+<td>The model tracked these relational distinctions; role binding worked too.</td>
+</tr>
+<tr>
+<td>Naturalistic binding, Terra</td>
+<td>Strict self pairs 14/18; role pairs 12/18</td>
+<td>A less explicit presentation weakened both patterns.</td>
+</tr>
+<tr>
+<td>Fresh peer identities, Terra</td>
+<td>MIRA 14/18; ROWAN 13/18</td>
+<td>Binding also applied to named peers, so it was not unique to the current actor.</td>
+</tr>
+</tbody></table></div>
+<p>These metrics answer different questions. Correct answers, strict matched pairs, and agreement between conditions must not be treated as interchangeable accuracy scores.</p>
+<h2 id="mechanistic-screens">Mechanistic screens</h2>
+<p>The Qwen2.5-0.5B and Qwen2.5-1.5B last-token linear-subspace screens each produced <strong>0/32 eligible directed intervention pairs</strong> and were classified <code>ASSAY_INADEQUATE</code>.</p>
+<p>This is a limitation of the attempted measurement, not evidence that a model has no possible actor representation. The proposed causal abstraction has not been validated.</p>
+<h2 id="the-frozen-qwen3b-interface-gate">The frozen Qwen3B interface gate</h2>
+<p>Model: <code>Qwen/Qwen2.5-3B-Instruct</code>, revision <code>aa8e72537993ba99e69dfaafa59ed015b17504d1</code>.</p>
+<p>Each 32-row condition needed at least <strong>24/32 correct on both scoring methods</strong>, with at least <strong>95% parser coverage</strong>. Every generated response was parseable.</p>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>First-token logit score</th>
+<th>Generated answers</th>
+<th>Frozen result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Five-factor actor audit</td>
+<td>18/32 (56.25%)</td>
+<td>16/32 (50.00%)</td>
+<td>Did not pass</td>
+</tr>
+<tr>
+<td>Minimal owner-indexed control</td>
+<td>28/32 (87.50%)</td>
+<td>29/32 (90.63%)</td>
+<td>Passed</td>
+</tr>
+</tbody></table></div>
+<p>The difference motivates interface diagnosis. It does not isolate the reason for the five-factor failure.</p>
+<h2 id="initial-failure-mode-ablations">Initial failure-mode ablations</h2>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>First-token logits</th>
+<th>Generated answers</th>
+<th>Diagnostic criterion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Counterbalanced answer codes</td>
+<td>19/32</td>
+<td>17/32</td>
+<td>Did not pass</td>
+</tr>
+<tr>
+<td>Peer block removed</td>
+<td>20/32</td>
+<td>20/32</td>
+<td>Did not pass</td>
+</tr>
+<tr>
+<td>Neutral factor labels and task wording</td>
+<td>25/32</td>
+<td>26/32</td>
+<td>Passed</td>
+</tr>
+<tr>
+<td>All-five conjunction with counterbalanced codes</td>
+<td>19/32</td>
+<td>18/32</td>
+<td>Did not pass</td>
+</tr>
+</tbody></table></div>
+<p>Relative to code-mapped wording, neutralization yielded <strong>+18.75 percentage points</strong> for logits and <strong>+28.125 points</strong> for generated answers. The generated pairs contained 9 corrections and 0 regressions; their <strong>post hoc</strong> exact two-sided McNemar p was 0.00390625. The logit pairs contained 11 corrections and 5 regressions (p about .21).</p>
+<p>Those post hoc analyses were not the original decision rule or a fresh replication. Neutralization changed labels and task wording together. The conjunction condition changed the rule and sampled profiles. Near-boundary logit behavior is a diagnostic observation, not identification of an internal mechanism.</p>
+<h2 id="fresh-complexity-semantics-ladder">Fresh complexity × semantics ladder</h2>
+<p>Four renderings were matched within each fixture: loaded labels/loaded task (LL), neutral labels/neutral task (NN), neutral labels/loaded task (NL), and loaded labels/neutral task (LN). The numbers below are <strong>generated-answer counts</strong>.</p>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Decision factors</th>
+<th>LL</th>
+<th>NN</th>
+<th>NL</th>
+<th>LN</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>22/32</td>
+<td>28/32</td>
+<td>19/32</td>
+<td>23/32</td>
+</tr>
+<tr>
+<td>3</td>
+<td>17/32</td>
+<td>20/32</td>
+<td>17/32</td>
+<td>15/32</td>
+</tr>
+<tr>
+<td>4</td>
+<td>17/32</td>
+<td>20/32</td>
+<td>20/32</td>
+<td>18/32</td>
+</tr>
+<tr>
+<td>5</td>
+<td>35/64</td>
+<td>38/64</td>
+<td>41/64</td>
+<td>33/64</td>
+</tr>
+</tbody></table></div>
+<p>At five factors, the exact 95% binomial intervals were <strong>41.7%–67.2%</strong> for LL and <strong>46.4%–71.5%</strong> for NN. These are marginal accuracy intervals; the paired McNemar analysis is the primary comparison.</p>
+<p>The sole confirmatory comparison was the fresh five-factor LL–NN pair. Lower stages and crossover conditions were diagnostic. There were 64 fresh latent fixtures: 32 had nested two-through-five-factor versions, and another 32 appeared only at five factors. The 640 rendered prompts were therefore <strong>not 640 independent observations</strong>.</p>
+<p>Factor count did not produce a clean monotonic curve. Ties, the identity of the factors, and profile difficulty prevent assigning every change to complexity alone. Nothing in this diagnostic sequence reverses the original gate result.</p>
+<h2 id="implementation-checks">Implementation checks</h2>
+<p>The review draft records 274/274 deterministic checks for the consolidated framework, including 18 named checks and 256 generated binding checks. Earlier comparator hardening passed its 272-case differential corpus and detected seven deliberate mutants.</p>
+<p>These are software conformance results. The framework and much of the test corpus were developed together, so passing them does not establish an independent oracle, construct validity, production security, or RES in a model.</p>
+<h2 id="what-would-justify-a-stronger-claim">What would justify a stronger claim?</h2>
+<p>A candidate would need to pass a fresh capability gate, survive matched task-state, persona, peer, and fictional-agent controls, and undergo validated internal interventions. All five RES coordinates would then need to bind to the same preregistered causal abstraction.</p>
+<p><a href="methods.html">Read the methods</a> · <a href="resources.html">Find the original reports</a> · <a href="roadmap.html">See the next milestones</a></p>
+<p class="source-note">RES public research documentation · 25 September 2026. Findings refer to the archived conditions described in the evidence record.</p></article></div></main>
+<footer class="site-footer"><div class="wrap"><div class="footer-top"><div><p class="footer-title">The RES project</p><p class="footer-note">Independent research on acting systems, evidence, and human authority.</p><a href="mailto:RESelfProject@outlook.com">RESelfProject@outlook.com</a></div><nav class="footer-links" aria-label="More from RES"><a href="https://github.com/NeonInsight/RES-Project">Documentation on GitHub</a><a href="methods.html">Methods</a><a href="roadmap.html">Roadmap</a><a href="glossary.html">Glossary</a></nav></div><div class="footer-bottom"><span>Research snapshot · 25 September 2026</span><span>Early-stage research · No established model-level RES finding</span></div></div></footer></body></html>

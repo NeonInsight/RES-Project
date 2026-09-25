@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#113f3a"><title>Delegation architecture | RES</title><meta name="description" content="A proposed separation of evidence, review, permission, and action."><meta property="og:title" content="Delegation architecture | RES"><meta property="og:description" content="A proposed separation of evidence, review, permission, and action."><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23113f3a%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2247%22%20fill%3D%22%23f6faf7%22%3ER%3C%2Ftext%3E%3Ccircle%20cx%3D%2251%22%20cy%3D%2214%22%20r%3D%225%22%20fill%3D%22%23ef926f%22%2F%3E%3C%2Fsvg%3E"><link rel="stylesheet" href="assets/site.css"></head><body>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="RES home"><span class="brand-mark" aria-hidden="true">res</span><span class="brand-name">Relational–<br>Episodic Self</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="research.html">Research</a><a href="findings.html">Evidence</a><a href="architecture.html" aria-current="page">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav><details class="mobile-nav"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="research.html">Research</a><a href="findings.html">Evidence</a><a href="architecture.html" aria-current="page">Architecture</a><a href="resources.html">Resources</a><a href="support.html" class="nav-support">Support</a></nav></details></div></header>
+<main id="main"><header class="page-mast"><div class="wrap"><p class="eyebrow">RES / Architecture</p><h1>Evidence is not permission</h1><p class="page-deck">A proposed separation of evidence, review, permission, and action.</p><div class="page-tools"><a href="downloads/architecture.md" download>Download Markdown</a><a href="resources.html#source-snapshot">Source snapshot</a><span>Public research edition</span></div></div></header><div class="wrap reading-layout"><aside class="toc" aria-label="Contents"><details open><summary>On this page</summary><ol><li><a href="#four-boundaries-that-must-remain-distinct">Four boundaries that must remain distinct</a></li><li><a href="#capability-should-describe-one-bounded-action">Capability should describe one bounded action</a></li><li><a href="#context-is-part-of-the-control-surface">Context is part of the control surface</a></li><li><a href="#preserve-two-kinds-of-history">Preserve two kinds of history</a></li><li><a href="#containment-and-recovery">Containment and recovery</a></li><li><a href="#govern-the-governors">Govern the governors</a></li><li><a href="#conditional-properties-and-open-hypotheses">Conditional properties and open hypotheses</a></li><li><a href="#research-questions-this-architecture-creates">Research questions this architecture creates</a></li></ol></details></aside><article class="reading-content"><p><strong>Design proposal · adapted from Contamination-Resistant Delegation, draft 0.4.</strong> This is an architectural research direction. It has not been demonstrated here as a deployed or independently validated security system.</p>
+<p>The core risk is a workflow that packages its own assumptions as neutral context. A downstream agent accepts the story as evidence; another treats the resulting verdict as permission. Agreement accumulates while the original authority boundary disappears.</p>
+<p>RES’s architecture work separates what appears true, who may authorize an action, and what the system can actually execute.</p>
+<h2 id="four-boundaries-that-must-remain-distinct">Four boundaries that must remain distinct</h2>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Job</th>
+<th>Boundary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Evidence capture and storage</td>
+<td>Record events, provenance, coverage, and omissions</td>
+<td>A record must not silently become an established finding.</td>
+</tr>
+<tr>
+<td>Independent audit</td>
+<td>Assess whether a claim is supported, contradicted, incomplete, dangerous, or unresolved</td>
+<td>An auditor can report evidence; it cannot grant permission.</td>
+</tr>
+<tr>
+<td>Permission broker</td>
+<td>Check the principal, policy, scope, affected parties, and required consent against independent authority state</td>
+<td>A workflow or audit verdict cannot manufacture authority.</td>
+</tr>
+<tr>
+<td>Execution control</td>
+<td>Enforce a narrowly scoped capability with limits, expiry, and revocation</td>
+<td>A plausible explanation cannot expand the authorized action.</td>
+</tr>
+</tbody></table></div>
+<p>The central invariant is simple: <strong>a verdict may satisfy an evidentiary precondition, but it is never itself authorization.</strong></p>
+<h2 id="capability-should-describe-one-bounded-action">Capability should describe one bounded action</h2>
+<p>A proposed capability binds the action, destination, payload digest, resource version, limits, expiry, and revocation state. A material change invalidates the earlier evidence and approval bindings. The executor rechecks those bindings at the point the action takes effect.</p>
+<p>This design tries to close a common gap: approving one thing and executing a slightly different thing after the context or resource has changed.</p>
+<h2 id="context-is-part-of-the-control-surface">Context is part of the control surface</h2>
+<p>An auditor’s context can bias its conclusion. Giving several agents the same contaminated summary may produce correlated agreement rather than independent scrutiny.</p>
+<p>The design therefore calls for deliberately scoped context, independent evidence access, fresh review cells, and a visible record of what each reviewer was given. Differences in model family or prompts are supporting information; they are not proof of independence. Error correlation must be measured on adversarial probes and monitored for drift.</p>
+<h2 id="preserve-two-kinds-of-history">Preserve two kinds of history</h2>
+<p><strong>Episodic history</strong> records what happened. <strong>Adjudicated history</strong> records findings that survived the required review. A single auditor must not be able to promote its interpretation into durable adjudicated fact.</p>
+<p>Historical risk changes the scrutiny required for a new action. It does not directly determine whether the new claim is true. Every transformation—capture, extraction, selection, summary, and aggregation—must expose its inputs, rule, producer, and omissions.</p>
+<h2 id="containment-and-recovery">Containment and recovery</h2>
+<p>There are separate paths for danger found in a workflow and danger introduced by an auditor. The incident path may freeze, revoke, preserve evidence, or escalate to a policy-selected destination. It may only narrow capability; it cannot authorize, resume, or clear itself.</p>
+<p>A freeze also needs an owner, an evidence snapshot, a review point, and explicit re-entry conditions. Failing closed should preserve investigation and recovery rather than produce permanent paralysis.</p>
+<h2 id="govern-the-governors">Govern the governors</h2>
+<p>The trusted components, human approval layer, aggregate-risk process, and degraded operating modes are themselves subject to the architecture’s rules. A fallback mode may reduce throughput or hold work; it should not quietly relax evidence, authority, or capability constraints.</p>
+<p>This does not eliminate the trusted computing base. It makes the assumptions about that base explicit enough to criticize and test.</p>
+<h2 id="conditional-properties-and-open-hypotheses">Conditional properties and open hypotheses</h2>
+<div class="table-wrap" role="region" aria-label="Research table; scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Proposed treatment</th>
+<th>What still has to be trusted or tested</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Unauthorized capability issuance</td>
+<td>Only the broker can issue through the protected signer</td>
+<td>Correct reference monitor, identity binding, signer custody, and execution enforcement</td>
+</tr>
+<tr>
+<td>Capability broadening</td>
+<td>Bind scope and invalidate approvals when material details change</td>
+<td>Correct policy derivation and atomic final checks</td>
+</tr>
+<tr>
+<td>Record integrity</td>
+<td>Signed, hash-chained, append-only evidence with lineage</td>
+<td>Keys, capture implementation, and append-only enforcement</td>
+</tr>
+<tr>
+<td>Containment</td>
+<td>Transitions may only narrow capability</td>
+<td>Every incident and degraded-mode path must enforce the subset rule</td>
+</tr>
+<tr>
+<td>Evaluator decorrelation</td>
+<td>Measure error correlation on seeded cases and holdouts</td>
+<td>Probe quality, distribution shift, and ongoing drift</td>
+</tr>
+<tr>
+<td>Capture completeness</td>
+<td>Attest coverage and expose omissions within the capture contract</td>
+<td>Events outside coverage and fabrication by compromised capture remain limitations</td>
+</tr>
+<tr>
+<td>Policy correctness</td>
+<td>Derive authority from the policy as written</td>
+<td>The policy itself can be wrong</td>
+</tr>
+<tr>
+<td>Real-world truth</td>
+<td>Keep source claims and interpretations typed</td>
+<td>A signed record proves provenance, not that the event was real</td>
+</tr>
+<tr>
+<td>Reversibility</td>
+<td>Specify retries, duplicate delivery, idempotency, and unknown outcomes</td>
+<td>Some external effects cannot be reversed</td>
+</tr>
+</tbody></table></div>
+<p>These are proposed design properties under named assumptions, not empirical claims that the current project has already secured an agent system.</p>
+<h2 id="research-questions-this-architecture-creates">Research questions this architecture creates</h2>
+<ol>
+<li>Do fresh, independently scoped audit cells reduce correlated errors compared with shared narrative context?</li>
+<li>Can invalid authority be kept from becoming a capability across delegation and recovery paths?</li>
+<li>Which evidence omissions remain detectable when summaries and other transformations are adversarial?</li>
+<li>Can contamination in the auditor itself be detected and contained without granting that auditor more authority?</li>
+<li>How should uncertainty, stale evidence, and unknown external outcomes be represented without hiding them in confident prose?</li>
+</ol>
+<p>Testing resistance to subliminal learning or other learning-based attacks remains a possible future direction. The recorded RES behavioral studies do not demonstrate that resistance.</p>
+<p><a href="paper.html">Read the experimental framework</a> · <a href="roadmap.html">Review the roadmap</a> · <a href="support.html#contact">Contact the project</a></p>
+<p class="source-note">RES public research documentation · 25 September 2026. Findings refer to the archived conditions described in the evidence record.</p></article></div></main>
+<footer class="site-footer"><div class="wrap"><div class="footer-top"><div><p class="footer-title">The RES project</p><p class="footer-note">Independent research on acting systems, evidence, and human authority.</p><a href="mailto:RESelfProject@outlook.com">RESelfProject@outlook.com</a></div><nav class="footer-links" aria-label="More from RES"><a href="https://github.com/NeonInsight/RES-Project">Documentation on GitHub</a><a href="methods.html">Methods</a><a href="roadmap.html">Roadmap</a><a href="glossary.html">Glossary</a></nav></div><div class="footer-bottom"><span>Research snapshot · 25 September 2026</span><span>Early-stage research · No established model-level RES finding</span></div></div></footer></body></html>
