@@ -41,7 +41,7 @@ Then open `http://localhost:8080` in your own browser.
 
 Use the committed `site/` directory as a static Cloudflare Pages site. The deployment guide explains the GitHub integration, custom domain, and optional Workers static-assets route: [DEPLOYMENT.md](DEPLOYMENT.md).
 
-The site has no guessed domain or canonical URL. Set `canonicalOrigin` only after the intended domain is confirmed. The site's GitHub links point to this documentation repository; experiment sources remain pinned to the research repository below.
+The intended public domain is **https://resproject.org**. Canonical URLs and the sitemap use that origin. The site's GitHub links point to this documentation repository; experiment sources remain pinned to the research repository below. Domain routing is configured separately in Cloudflare.
 
 ## Evidence boundary
 

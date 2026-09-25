@@ -19,9 +19,9 @@ The renderer is vendored, so the build does not install dependencies. Alternativ
 
 ## Custom domain
 
-After the initial Pages deployment succeeds, open its **Custom domains** settings and add the exact domain you own. Follow Cloudflare’s domain verification and DNS instructions for that project. Do not replace mail records or unrelated DNS records. Domain registration and website publication are separate steps.
+After the initial Pages deployment succeeds, open its **Custom domains** settings and add **resproject.org**. Follow Cloudflare’s domain verification and DNS instructions for that project. Do not replace mail records or unrelated DNS records. Domain registration and website publication are separate steps.
 
-Then set `canonicalOrigin` in `site.config.json` to the confirmed HTTPS origin, without a trailing slash, rebuild, and commit. This adds canonical URLs and a sitemap for the actual domain. Until it is configured, the site omits guessed canonical URLs and the sitemap.
+`canonicalOrigin` in `site.config.json` is already set to `https://resproject.org`. The generated pages include canonical URLs and `sitemap.xml`; `robots.txt` links to that sitemap. This metadata does not itself configure DNS or attach the domain to the Cloudflare project.
 
 ## Cloudflare Workers static assets
 
@@ -46,4 +46,4 @@ For a new Pages project created with Direct Upload, upload the **contents of `si
 - [Pages custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
 - [Workers static assets](https://developers.cloudflare.com/workers/static-assets/)
 
-Settings were prepared against Cloudflare’s documentation on 25 September 2026. No domain has been invented or silently connected by this package.
+Settings were prepared against Cloudflare’s documentation on 25 September 2026. The domain was supplied by the project owner; the actual Cloudflare domain attachment and live deployment must be verified separately.
