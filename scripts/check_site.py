@@ -24,7 +24,7 @@ class Document(HTMLParser):
         if tag == 'html': self.lang = a.get('lang')
         if tag == 'h1': self.h1 += 1
         if tag == 'main': self.main += 1
-        if tag == 'script': self.scripts += 1
+        if tag == 'script' and a.get('type') != 'application/ld+json': self.scripts += 1
         if 'id' in a:
             if a['id'] in self.ids: self.duplicates.append(a['id'])
             self.ids.add(a['id'])
@@ -72,6 +72,18 @@ home = (SITE/'index.html').read_text()
 findings = (SITE/'findings.html').read_text()
 for required in ['https://gofund.me/95781ab95','mailto:RESelfProject@outlook.com','No established model-level RES finding']:
     if required not in home: errors.append(f'Home missing required content: {required}')
+marker = '<script type="application/ld+json">'
+schema_start = home.find(marker)
+schema_end = home.find('</script>', schema_start + len(marker)) if schema_start >= 0 else -1
+if schema_start < 0 or schema_end < 0:
+    errors.append('Home missing JSON-LD WebSite metadata')
+else:
+    try:
+        website = json.loads(home[schema_start + len(marker):schema_end])
+        if website.get('@type') != 'WebSite' or website.get('name') != 'RES Project' or website.get('url') != 'https://resproject.org/':
+            errors.append('Home JSON-LD WebSite metadata does not match the configured project identity')
+    except json.JSONDecodeError:
+        errors.append('Home JSON-LD WebSite metadata is invalid JSON')
 for required in ['0.507812','35/64','38/64','did <strong>not</strong> replicate','ASSAY_INADEQUATE']:
     if required not in findings: errors.append(f'Findings missing frozen conclusion: {required}')
 

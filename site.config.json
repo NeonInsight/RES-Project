@@ -1,10 +1,13 @@
 {
-  "title": "RES — Relational–Episodic Self",
+  "title": "RES Project: Relational–Episodic Self",
   "email": "RESelfProject@outlook.com",
   "donateUrl": "https://gofund.me/95781ab95",
   "repositoryUrl": "https://github.com/NeonInsight/RES-Project",
   "repositoryLabel": "Documentation on GitHub",
   "canonicalOrigin": "https://resproject.org",
-  "updated": "2026-09-25",
-  "evidenceCommit": "1187ead1fa13a4af76433ca32b8aad30cd3d52ef"
+  "updated": "2026-09-27",
+  "evidenceCommit": "1187ead1fa13a4af76433ca32b8aad30cd3d52ef",
+  "siteName": "RES Project",
+  "alternateName": "Relational–Episodic Self",
+  "description": "The RES Project (Relational–Episodic Self) studies how AI systems track actors, roles, authority, and commitments to support accountable AI delegation."
 }
